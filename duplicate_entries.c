@@ -16,12 +16,16 @@ int main() {
     printf("new user entry\n");
     printf("enter the new user\n");
     scanf("%d",&id);
-    
-    if(id == a[i])
+    for(int i=0;i<n;i++)
     {
-        printf("the user already exists\n");
+        if(id == a[i])
+        {
+            printf("the user already exists\n");
+            flag = 1;
+            break;
+        }
     }
-    else
+    if(flag == 0)
     {
         printf("the user is available for registration\n");
     }
